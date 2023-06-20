@@ -1,10 +1,12 @@
 # main.py
 
-from controllers import MyController
+from controllers import LibraryController
+
 
 def main():
-    controller = MyController()
+    controller = LibraryController()
     controller.run()
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     main()

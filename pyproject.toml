@@ -9,6 +9,19 @@ readme = "README.md"
 python = "^3.11"
 textual = {version = "^0.28.0", extras = ["dev"]}
 
+[tool.poetry.group.dev.dependencies]
+blue = "^0.9.1"
+isort = "^5.12.0"
+taskipy = "^1.11.0"
+pytest = "^7.3.2"
+pytest-cov = "^4.1.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+lint = "blue . && isort ."
+docs = "mkdocs serve"
+test = "pytest test -vv && coverage report -m"
+post_test = "coverage html"

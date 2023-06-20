@@ -3,6 +3,7 @@
 from models import MyModel
 from views import MyView
 
+
 class MyController:
     def __init__(self):
         self.model = MyModel()

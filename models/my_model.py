@@ -1,5 +1,6 @@
 # models/my_model.py
 
+
 class MyModel:
     def get_data(self):
         # Code to fetch data from a data source
