@@ -23,3 +23,8 @@ class Book:
         cursor = self.db.cursor()
         cursor.execute("DELETE FROM books WHERE id = ?", (id,))
         self.db.commit()
+
+    def read_by_id(self, id):
+        cursor = self.db.cursor()
+        cursor.execute("SELECT * FROM books WHERE id=?", (id,))
+        return cursor.fetchone()
